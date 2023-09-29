@@ -29,3 +29,5 @@ jobs:
         run: |
           $status = git status --porcelain
           Write-Output $status
+          Write-Output "test"
+          Write-Host "test2"
