@@ -25,11 +25,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      # Runs a single command using the runners shell
-      - name: test
-        shell: pwsh
-        run: |
-          $status = git status --porcelain
-          Write-Output $status
-          Write-Output "test"
-          Write-Host "test2"
+      - name: Changed Files
+        uses: tj-actions/changed-files@latest
+        with:
+          # File and directory patterns used to detect changes (Defaults to the entire repo if unset) **NOTE:** Multiline file/directory patterns should not include quotes.
+          files: '**/*.bicep'
