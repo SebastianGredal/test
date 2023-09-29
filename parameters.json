@@ -1,0 +1,60 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "subscriptionId": {
+            "value": "a8a5d9c0-b8c1-42bf-8918-0f914cc33097"
+        },
+        "name": {
+            "value": "test"
+        },
+        "location": {
+            "value": "westeurope"
+        },
+        "environmentId": {
+            "value": "/subscriptions/a8a5d9c0-b8c1-42bf-8918-0f914cc33097/resourceGroups/rg-api-simulator-apisimulator-t/providers/Microsoft.App/managedEnvironments/managedEnvironment-rgapisimulatora-a6bc"
+        },
+        "containers": {
+            "value": [
+                {
+                    "name": "test",
+                    "image": "docker.io/apimastery/apisimulator:latest",
+                    "command": [],
+                    "resources": {
+                        "cpu": 0.25,
+                        "memory": ".5Gi"
+                    }
+                }
+            ]
+        },
+        "registries": {
+            "value": []
+        },
+        "secrets": {
+            "value": {
+                "arrayValue": []
+            }
+        },
+        "ingress": {
+            "value": {
+                "external": true,
+                "transport": "Tcp",
+                "allowInsecure": false,
+                "targetPort": 6090,
+                "exposedPort": 6090,
+                "stickySessions": {
+                    "affinity": "none"
+                }
+            }
+        },
+        "environmentName": {
+            "value": "managedEnvironment-rgapisimulatora-a6bc"
+        },
+        "workspaceName": {
+            "value": "workspacergapisimulatorapisimulatort8e1c"
+        },
+        "workspaceLocation": {
+            "value": "westeurope"
+        }
+    }
+}
