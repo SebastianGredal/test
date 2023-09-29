@@ -27,4 +27,5 @@ jobs:
       - name: test
         shell: pwsh
         run: |
-          git diff-tree --no-commit-id --name-only -r ${{ github.sha }}
+          $status = git status --porcelain
+          Write-Output $status
